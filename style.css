@@ -1,0 +1,145 @@
+ 
+ body{
+ 	font-family: sans-serif;
+ 	margin:0;
+ }
+
+ *{
+ 	box-sizing: border-box;
+ 	margin: 0;
+ }
+
+ .row{
+ 	display: flex;
+ 	flex-wrap: wrap;
+ }
+.h3style{
+	height: 120px;
+	max-height: 150px;
+}
+ .services{
+ 	min-height: 100vh;
+ 	padding:80px 0;
+ }
+
+.services .items{
+	flex:0 0 100%;
+	max-width: 100%;
+}
+.services .items .item{
+	flex:0 0 33.33%;
+	max-width: 33.33%;
+	padding: 15px;
+}
+
+.services .items .item-inner{
+	border:1px solid #aea6a6;
+	border-radius: 7px;
+	padding: 40px;
+}
+.services .items .read-more-cont{
+	display: none;
+}
+.services .items .item-inner h3{
+	font-size: 20px;
+	color:#000000;
+	margin-bottom: 30px;
+	position: relative;
+}
+.services .items .item-inner h3::before{
+  content: '';
+  height: 1px;
+  width: 80px;
+  background-color: #000000;
+  position: absolute;
+  left:0;
+  bottom:-10px;
+}
+
+.services .items .item-inner p{
+	color:#555555;
+	font-size: 16px;
+	margin:0 0 30px;
+}
+.services .items .item-inner .btn{
+	font-size: 16px;
+	background-color: transparent;
+	border:1px solid #e00e54;
+	color: #e00e54;
+	padding: 8px 15px;
+	cursor: pointer;
+}
+
+.box{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top:0;
+	background-color: #00000080;
+	z-index: 500;
+	visibility: hidden;
+	opacity:0;
+	transition: all 0.5s ease-in-out;
+}
+.box.open{
+  visibility: visible;
+	opacity:1;	
+}
+.box .content{
+	background-color: #ffffff;
+	width: 600px;
+	height: 500px;
+	position: absolute;
+	left: 50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+	border-radius: 8px;
+}
+
+.box .header{
+	padding: 15px 40px 15px 15px;
+	border-bottom: 1px solid #dddddd;
+}
+.box .header h3{
+	margin:0;
+	color: #e00e54;
+	font-size: 20px;
+}
+.box .header .close-icon{
+	position: absolute;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    color:  #e00e54;
+    font-size: 28px;
+    line-height: 30px;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+}
+.box .body{
+	padding: 15px;
+	max-height: 300px;
+	overflow-y: auto;
+}
+
+.box .body p{
+	font-size: 16px;
+	color:#555555;
+	margin:0 0 15px;
+}
+
+
+.fixText{
+	width: 250px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow:ellipsis;
+}
+
+
+
+
+
+
